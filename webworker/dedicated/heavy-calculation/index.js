@@ -1,10 +1,10 @@
 const worker = new Worker('worker.js');
 
-worker.onmessage = function(e) {
+worker.onmessage = function (e) {
     console.log('Sorted array:', e.data);
 };
 
-const arrayToSort = Array.from({ length: 10000000 }, () => Math.floor(Math.random() * 10000));
+const arrayToSort = Array.from({length: 10000000}, () => Math.floor(Math.random() * 10000));
 
 document.getElementById('sortWebWorkerBtn').addEventListener('click', () => {
     console.log('Sorting was started');
