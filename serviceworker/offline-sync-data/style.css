@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.status {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
