@@ -1,0 +1,27 @@
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.d-f {
+    display: flex;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.w-full {
+    width: 100%;
+}
+.mb-2 {
+    margin-bottom: .5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}

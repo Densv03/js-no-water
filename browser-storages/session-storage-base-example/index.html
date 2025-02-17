@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Storage example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div>
+        <p class="text-center text-bold">Save data to storage</p>
+        <form id="session-storage-form" class="w-full">
+            <label for="session-storage-key">Session storage key</label>
+            <input type="text" name="session-storage-key"
+                   id="session-storage-key"
+                   placeholder="Session storage key here"
+                   class="w-full mb-2"
+                   required>
+            <label for="session-storage-value">Session storage value</label>
+            <input type="text" name="session-storage-value"
+                   id="session-storage-value"
+                   placeholder="Session storage value here"
+                   class="w-full mb-2"
+                   required>
+            <button id="set-data">Save data</button>
+        </form>
+    </div>
+    <div>
+        <p class="text-center text-bold">Get data from storage</p>
+        <form id="get-session-storage-data" class="d-f fd-c">
+            <label for="session-storage-get-key">Session storage key</label>
+            <input type="text"
+                   id="session-storage-get-key"
+                   name="session-storage-get-key"
+                   class="mb-2"
+                   placeholder="Session storage key"
+                   required>
+            <button>Get data</button>
+            <p id="session-storage-get-value"></p>
+        </form>
+    </div>
+    <div>
+        <p class="text-center text-bold">Remove data from storage</p>
+        <form id="remove-session-storage-data" class="d-f fd-c">
+            <label for="session-storage-remove-key">Session storage key</label>
+            <input type="text"
+                   id="session-storage-remove-key"
+                   name="session-storage-remove-key"
+                   class="mb-2"
+                   placeholder="Session storage key"
+                   required>
+            <button>Remove data</button>
+        </form>
+    </div>
+
+    <div>
+        <button id="clear-storage-btn">Clear storage</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
