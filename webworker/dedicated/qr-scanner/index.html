@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QR Code Scanner - Performance Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>QR Code Scanner Performance</h1>
+    <p class="subtitle">Compare Main Thread vs Web Worker</p>
+    
+    <div class="mode-toggle">
+        <button id="mainThreadBtn" class="mode-btn active">🧵 Main Thread</button>
+        <button id="workerThreadBtn" class="mode-btn">⚡ Web Worker</button>
+    </div>
+    
+    <div class="video-container">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="metrics" class="metrics-overlay">
+            <div class="metric-item">
+                <span class="metric-label">Mode:</span>
+                <span id="modeDisplay" class="metric-value">Main Thread</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-label">Decode Time:</span>
+                <span id="decodeTime" class="metric-value">0ms</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-label">FPS:</span>
+                <span id="fps" class="metric-value">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="result" class="result"></div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

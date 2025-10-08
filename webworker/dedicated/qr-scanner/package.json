@@ -1,0 +1,16 @@
+{
+  "name": "qr-scanner-webworker",
+  "version": "1.0.0",
+  "description": "QR Code Scanner using Web Workers and jsQR",
+  "scripts": {
+    "start": "npx http-server -p 8080 -a 0.0.0.0 -c-1 -S -C .ssl/cert.pem -K .ssl/key.pem -o",
+    "dev": "npx live-server --port=8080 --host=0.0.0.0 --no-css-inject --https=.ssl",
+    "ip": "node -e \"const os = require('os'); const nets = os.networkInterfaces(); const results = {}; for (const name of Object.keys(nets)) { for (const net of nets[name]) { if (net.family === 'IPv4' && !net.internal) { if (!results[name]) { results[name] = []; } results[name].push(net.address); } } } console.log('\\n📱 Access on mobile (HTTPS):\\n'); Object.keys(results).forEach(name => results[name].forEach(ip => console.log('   https://' + ip + ':8080'))); console.log('\\n⚠️  Accept the certificate warning on your mobile browser\\n');\""
+  },
+  "keywords": [
+    "qr-scanner",
+    "webworker",
+    "jsqr"
+  ],
+  "license": "MIT"
+}

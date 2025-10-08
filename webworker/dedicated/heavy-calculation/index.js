@@ -7,7 +7,7 @@ worker.onmessage = function (e) {
 const arrayToSort = Array.from({length: 10000000}, () => Math.floor(Math.random() * 10000));
 
 document.getElementById('sortWebWorkerBtn').addEventListener('click', () => {
-    console.log('Sorting was started');
+    console.log('Sorting with web worker was started');
     worker.postMessage(arrayToSort);
 });
 

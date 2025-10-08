@@ -18,5 +18,6 @@ self.onmessage = async function (event) {
 
     const imageData = event.data;
     const predictions = await model.estimateFaces(imageData, false);
+    console.log(predictions);
     postMessage(predictions);
 };
